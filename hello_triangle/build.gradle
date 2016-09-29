@@ -3,13 +3,16 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "24.0.1"
+
     defaultConfig {
-        applicationId "com.chyang.open_opengles"
-        minSdkVersion 22
+        applicationId "com.chyang.hello_triangle"
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {

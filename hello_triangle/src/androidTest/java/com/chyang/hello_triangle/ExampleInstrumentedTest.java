@@ -1,4 +1,4 @@
-package com.chyang.open_opengles;
+package com.chyang.hello_triangle;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.chyang.open_opengles", appContext.getPackageName());
+        assertEquals("com.chyang.hello_triangle", appContext.getPackageName());
     }
 }

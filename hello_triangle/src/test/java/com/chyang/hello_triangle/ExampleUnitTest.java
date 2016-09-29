@@ -1,4 +1,4 @@
-package com.chyang.open_opengles;
+package com.chyang.hello_triangle;
 
 import org.junit.Test;
 
