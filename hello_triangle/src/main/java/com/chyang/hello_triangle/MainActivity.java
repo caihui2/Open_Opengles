@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         mGlSurfaceView = new GLSurfaceView(this);
         if(datectOpenGLES300()) {
             mGlSurfaceView.setEGLContextClientVersion(CONTEXT_CLIENT_VERSION);
-            mGlSurfaceView.setRenderer(new HelloTriangleRanderer());
+            mGlSurfaceView.setRenderer(new HelloTriangleRanderer(this));
         } else {
             finish();
         }
