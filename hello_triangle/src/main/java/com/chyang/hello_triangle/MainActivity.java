@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         mGlSurfaceView = new GLSurfaceView(this);
         if(datectOpenGLES300()) {
             mGlSurfaceView.setEGLContextClientVersion(CONTEXT_CLIENT_VERSION);
-            mGlSurfaceView.setRenderer(new HelloTriangleRanderer(this));
+            mGlSurfaceView.setRenderer(new HelloTriangleRenderer(this));
         } else {
             finish();
         }
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        mGlSurfaceView.onResume();;
+        mGlSurfaceView.onResume();
     }
 
     @Override
@@ -43,6 +43,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean datectOpenGLES300 (){
         ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         ConfigurationInfo info = am.getDeviceConfigurationInfo();
-        return (info.reqGlEsVersion >= 0x300000);
+        return (info.getGlEsVersion().equals("3.0"));
     }
 }
